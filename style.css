@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    /* Color pallete inspired by Mocha from Catppuccin */
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --subText: #bac2de;
+    --red: #f38ba8;
+    --yellow: #f9e2af;
+    --surface0: #313244;
+    --surface1: #45475a;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: var(--base);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+input {
+    margin: 0;
+    margin-left: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--text);
+    background-color: var(--base);
+    border: none;
+    outline: none;
+    width: calc(100% - 69px);
+    font-size: medium;
+    padding: 0;
+}
+
+#inputOutside {
+    display: flex;
+    width: 100%;
+}
+
+.window {
+    background-color: var(--surface0);
+    width: calc(40% - 10px);
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.windowContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+
+canvas {
+    max-height: 100%;
+    position: absolute;
+}
+.windowHeader {
+    background-color: var(--surface1);
+    display: flex;
+}
+.windowHeader p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.closeButton {
+    background-color: var(--red);
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+.red {
+    color: var(--red)
+}
+.yellow {
+    color: var(--yellow)
+}
+.subText {
+    color: var(--subText);
+}
