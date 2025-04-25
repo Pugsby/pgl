@@ -1,6 +1,6 @@
 const inputElement = document.getElementById('input');
 const outputElement = document.getElementById('output');
-var commandList = ['print', 'help', 'enabledLibraries', 'installedLibraries', 'enableLibrary', 'execute', 'credits', 'installLibrary'];
+var commandList = ['print', 'boot', 'help', 'enabledLibraries', 'installedLibraries', 'enableLibrary', 'execute', 'credits', 'installLibrary'];
 var enabledLibraries = [];
 var installedLibraries = [];
 var allowACE = false;
@@ -28,6 +28,9 @@ document.addEventListener('keydown', (event) => {
                 break;
             case 'help':
                 log('Available commands: ' + commandList.join(', '));
+                break;
+            case 'boot':
+                window.location.href = 'pugsbyOS/index.html';
                 break;
             case 'enabledLibraries':
                 if (enabledLibraries.length > 0) {

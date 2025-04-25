@@ -1,0 +1,190 @@
+body {
+    background-image: url("wallpaper1.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-position: bottom;
+    /* color: var(--text); Dark text on dark background. more like nuh uh*/
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all 300ms ease-in-out;
+}
+#taskbar {
+    max-width: calc(100% - 20px);
+    width: fit-content;
+    height: 30px;
+    background-color: var(--baseHalfOpacity);
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    z-index: 99999999999999;
+    display: flex;
+}
+#taskbar * {
+    padding: 0 10px;
+}
+.desktopIcon p {
+    margin: 0px;
+    text-align: center;
+}
+.desktopIcon {
+    width: fit-content;
+    height: 84px;
+    border-radius: 8px;
+    margin: auto;
+}
+.desktopIcon:hover {
+    background-color: var(--baseHalfOpacity);
+    backdrop-filter: blur(5px);
+    outline-color: var(--text);
+    outline-width: 2px;
+    outline-style: solid;
+}
+.desktopIcon img {
+    display: block;
+    margin: 0 auto;
+}
+.desktopIcon:hover {
+    cursor: pointer;
+}
+#desktop {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(84px, 84px));
+    grid-template-columns: repeat(auto-fill, minmax(84px, 84px));
+    grid-gap: 0px;
+    padding: 20px;
+}
+.window {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: var(--baseHalfOpacity);
+    resize: both;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: hidden; /* Prevent scrolling */
+    padding-bottom: 32px;
+    backdrop-filter: blur(5px);
+    transition: x 0ms ease-in-out, y 0ms ease-in-out, width 0ms ease-in-out, height 0ms ease-in-out;
+}
+.topbar {
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: var(--surface-0);
+    display: flex;
+}
+.topbar:hover {
+    cursor: move;
+}
+.topbarButton {
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 9999px;
+    position: absolute;
+    top: 7px;
+}
+.topbarButton:hover {
+    cursor: pointer;
+}
+.closebutton {
+    background-color: var(--maroon);
+    left: 7px;
+}
+.minimizebutton {
+    background-color: var(--yellow);
+    left: 27px;
+}
+.maximizebutton {
+    background-color: var(--green);
+    left: 47px;
+}
+
+.windowTitle {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    color: var(--text);
+    margin: 2.5px;
+}
+
+.window iframe {
+    margin-left: -2px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    color: var(--text);
+}
+
+.button {
+    background-color: var(--surface-0);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.taskBarIcon {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#taskbar button {
+    height: 90%;
+    aspect-ratio: 1;
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+}
+.fileExplorer div {
+    display:  grid;;
+}
+.whiteImage {
+    filter: invert(1);
+}
+#startMenu {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -330px;
+    width: 200px;
+    height: 300px;
+    background-color: var(--baseHalfOpacity);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 99999999999999;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+button:hover {
+    cursor: pointer;
+}
+.startMenuItem:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PugsbyOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <div id="desktop">
+        <div class="desktopIcon" onclick="openApp('settings')">
+            <img src="desktopIcons/settings.png" width="48" height="48">
+            <p>Settings</p>
+        </div>
+        <div class="desktopIcon" onclick="openApp('fileExplorer')">
+            <img src="desktopIcons/fileExplorer.png" width="48" height="48">
+            <p>File Explorer</p>
+        </div>
+    </div>
+    <div id="taskbar">
+        <button id="startButton" class="taskBarButton" onclick="startMenu()"><img src="logo.png" class="taskBarIcon whiteImage"></button>
+    </div>
+    <div id="startMenu">
+        <div class="startMenuItem" onclick="openApp('settings')">Settings</div>
+        <div class="startMenuItem" onclick="openApp('fileExplorer')">File Explorer</div>
+        <div class="startMenuItem" onclick="openApp('aniplay')">Aniplay</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
